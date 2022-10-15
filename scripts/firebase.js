@@ -4,6 +4,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebas
 // https://firebase.google.com/docs/web/setup#available-libraries
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
 import { onSnapshot, getFirestore, collection, addDoc, getDocs, getDoc, doc, deleteDoc, updateDoc } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
+import * as GlobalFuntions from "./globalFunctions.js";
 
 //-------------------FIREBASE CONFIGURATION------------------
 const firebaseConfig = {
@@ -54,7 +55,7 @@ function UserLogin ( email, password, form )
          // ...
          alert( "Usuario Logeado: " + email );
          form.reset();
-         NavigateTo( "/html/tareas.html" );
+         GlobalFuntions.NavigateTo( "/html/tareas.html" );
       } )
       .catch( ( error ) =>
       {

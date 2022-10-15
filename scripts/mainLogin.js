@@ -3,6 +3,7 @@ import
 {
    CreateUser, UserLogin
 } from "./firebase.js";
+import * as GlobalFuntions from "./globalFunctions.js";
 //Variables
 var btnCreateAc, btnLogin, email, password, form;
 window.onload = () =>
@@ -19,12 +20,12 @@ window.onload = () =>
    //Listeners
    btnCreateAc.addEventListener( "click", () =>
    {
-      if ( !ValEmailAndPassword( email.value, password.value ) ) return false;
+      if ( !GlobalFuntions.ValEmailAndPassword( email.value, password.value ) ) return false;
       CreateUser( email.value, password.value, form );
    } );
    btnLogin.addEventListener( "click", () =>
    {
-      if ( !ValEmailAndPassword( email.value, password.value ) ) return false;
+      if ( !GlobalFuntions.ValEmailAndPassword( email.value, password.value ) ) return false;
       UserLogin( email.value, password.value, form );
    } );
 };

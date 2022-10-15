@@ -1,5 +1,6 @@
 //IMPORTS
 import { AddTarea, OnGetTareas, DeleteTarea, GetTarea, UpdateTarea } from "./firebase.js";
+import * as GlobalFuntions from "./globalFunctions.js";
 //DECLARACIÓN DE VARIABLES
 var form, btnAddTarea, tareaTitle, tareaDesc, tareasList, tarea, btnDeleteList, btnEditList;
 
@@ -14,7 +15,7 @@ window.onload = async () =>
    //ONSNAPSHOT
    OnGetTareas( ( querySnapshot ) =>
    {
-      CleanHtml( tareasList );
+      GlobalFuntions.CleanHtml( tareasList );
       let array = new Array();
       querySnapshot.forEach( ( doc ) =>
       {
@@ -23,7 +24,7 @@ window.onload = async () =>
       array.reverse();
       array.forEach( ( tarea ) =>
       {
-         DrawTareasDiv( tareasList, tarea );
+         GlobalFuntions.DrawTareasDiv( tareasList, tarea );
       } );
       InicializarVariablesDinamicas();
    } );
@@ -48,8 +49,8 @@ function InicializarListeners ()
    btnAddTarea.addEventListener( "click", ( e ) =>
    {
       e.preventDefault();
-      tarea = GetActualTarea( tareaTitle.value, tareaDesc.value );
-      if ( !ValTarea( tarea ) ) return false;
+      tarea = GlobalFuntions.GetActualTarea( tareaTitle.value, tareaDesc.value );
+      if ( !GlobalFuntions.ValTarea( tarea ) ) return false;
       if ( btnAddTarea.innerText === "Upload Task" )
       {
          UpdateTarea( btnAddTarea.id, tarea, form, btnAddTarea );

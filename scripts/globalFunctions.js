@@ -1,17 +1,17 @@
 /* Funciones globales */
 
 /* Funciones NavigateTo */
-function NavigateTo ( page )
+export function NavigateTo ( page )
 {
    location.href = page;
 }
 /* Funciones Reload */
-function Reload ()
+export function Reload ()
 {
    location.reload();
 }
 /* Funciones ValEmailAndPassword */
-function ValEmailAndPassword ( email, password, )
+export function ValEmailAndPassword ( email, password, )
 {
    if ( email == "" || password == "" )
    {
@@ -24,7 +24,7 @@ function ValEmailAndPassword ( email, password, )
    }
 }
 /* Función ValTarea */
-function ValTarea ( tarea )
+export function ValTarea ( tarea )
 {
    if ( tarea.titulo == "" || tarea.tarea == "" || tarea == "" )
    {
@@ -37,7 +37,7 @@ function ValTarea ( tarea )
    }
 }
 /* Función getTarea */
-function GetActualTarea ( titulo, tarea )
+export function GetActualTarea ( titulo, tarea )
 {
    return {
       titulo: titulo,
@@ -45,7 +45,7 @@ function GetActualTarea ( titulo, tarea )
    };
 }
 /* Función getTarea */
-function DrawTareasDiv ( container, doc )
+export function DrawTareasDiv ( container, doc )
 {
    //DRAW TAREAS
    let divTarea = document.createElement( "div" );
@@ -83,7 +83,7 @@ function DrawTareasDiv ( container, doc )
    container.appendChild( divTarea );
 }
 /* Función CleanHtml */
-function CleanHtml ( container )
+export function CleanHtml ( container )
 {
    container.innerHTML = "";
 }
