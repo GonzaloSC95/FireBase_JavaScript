@@ -1,8 +1,6 @@
 //Imports
 import
-{
-   CreateUser, UserLogin
-} from "./firebase.js";
+{ CreateUser, UserLogin } from "./firebase.js";
 import * as GlobalFuntions from "./globalFunctions.js";
 //Variables
 var btnCreateAc, btnLogin, email, password, form;
