@@ -62,18 +62,14 @@ export function DrawTareasDiv ( container, doc )
    /////////////////////////////
    let btnEdit = document.createElement( "button" );
    btnEdit.innerText = "Editar";
-   btnEdit.classList.add( "btnEdit" );
-   btnEdit.classList.add( "btn" );
-   btnEdit.classList.add( "btn-primary" );
-   btnEdit.classList.add( "float-right" );
+   btnEdit.classList.add( "btnEdit", "btn", "btn-primary", "float-right" );
    ///////////////
    let btnDelete = document.createElement( "button" );
    btnDelete.innerText = "Eliminar";
    btnDelete.classList.add( "btnDelete", "btn", "btn-primary", "float-left" );
    /////////////////////////////
    let divButtons = document.createElement( "div" );
-   divButtons.classList.add( "mt-2" );
-   divButtons.classList.add( "d-flex" );
+   divButtons.classList.add( "mt-2", "d-flex" );
    divButtons.appendChild( btnDelete );
    divButtons.appendChild( btnEdit );
    //////////////////////////////
