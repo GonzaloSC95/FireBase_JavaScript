@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/yeti/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./style/background_pg1.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <title>Task Master</title>
+  </head>
+  <body>
+    <div class="header">
+      <!--Content before waves-->
+      <div class="inner-header flex">
+        <main id="app" class="p-5 card-bg rounded-5">
+          <form
+            name="login_form"
+            id="login_form"
+            class="row align-items-center"
+          >
+            <div class="input-group">
+              <span class="input-group-text text-bg-primary border-0">@</span>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                required
+                class="form-control m-0"
+              />
+            </div>
+            <div class="input-group mt-2">
+              <span class="input-group-text text-bg-primary border-0">&sext;</span>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+                required
+                class="form-control"
+              />
+            </div>
+          </form>
+          <div class="row align-items-center">
+            <div class="input-group mt-2">
+              <button id="btnCreateAc" class="btn btn-primary w-100 rounded-4">
+                Create Account
+              </button>
+            </div>
+            <div class="input-group mt-2">
+              <button id="btnLogin" class="btn btn-primary w-100 rounded-4">
+                Login
+              </button>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <!--Waves Container-->
+      <div id="waves">
+        <svg
+          class="waves"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28"
+          preserveAspectRatio="none"
+          shape-rendering="auto"
+        >
+          <defs>
+            <path
+              id="gentle-wave"
+              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            />
+          </defs>
+          <g class="parallax">
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="0"
+              fill="rgba(255,255,255,0.7"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="3"
+              fill="rgba(255,255,255,0.5)"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="5"
+              fill="rgba(255,255,255,0.3)"
+            />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+          </g>
+        </svg>
+      </div>
+      <!--Waves end-->
+    </div>
+  </body>
+  <!-- SCRIPTS -->
+  <script type="text/javascript" src="/scripts/globalFunctions.js"></script>
+  <script type="module" src="scripts/firebase.js"></script>
+  <script type="module" src="scripts/mainLogin.js"></script>
+</html>

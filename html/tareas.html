@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/yeti/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../style/background_pg2.css" />
+    <link rel="stylesheet" href="../style/main.css" />
+    <title>Task Master</title>
+  </head>
+  <body>
+    <div class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <main class="context row align-items-center p-4 top-0">
+      <h1 class="bg-primary text-center text-white sbrayado rounded-pill" style="font-size: 3.5em;">
+        Task Master
+      </h1>
+      <section class="row">
+        <article class="col-md-6">
+          <div class="card border-primary border-custom">
+            <div class="card-body bg-custom">
+              <h1 class="h4 bg-primary">Añadir tarea</h1>
+              <form name="tareas_form" id="tareas_form">
+                <input
+                  class="form-control mb-1"
+                  type="text"
+                  name="tarea_title"
+                  id="tarea_title"
+                  placeholder="Task Title"
+                />
+                <br />
+                <textarea
+                  name="tarea_desc"
+                  id="tarea_desc"
+                  class="form-control mb-3"
+                  rows="3"
+                  placeholder="Task Description"
+                ></textarea>
+                <br />
+                <button id="btnAddTarea" class="btn btn-primary">
+                  Add Task
+                </button>
+              </form>
+            </div>
+          </div>
+        </article>
+        <article id="tareas_list" class="col-md-6"></article>
+      </section>
+    </main>
+  </body>
+  <!-- SCRIPTS -->
+  <script type="text/javascript" src="../scripts/globalFunctions.js"></script>
+  <script type="module" src="../scripts/firebase.js"></script>
+  <script type="module" src="../scripts/mainTareas.js"></script>
+</html>

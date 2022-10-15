@@ -1,0 +1,28 @@
+.card-bg {
+  border: white 5px solid;
+}
+.bg-custom {
+  background: #4e54c8;
+}
+.border-custom {
+  border: 5px solid;
+  border-radius: 10px;
+}
+.sbrayado{
+   border-bottom:#ffffff 20px double ;
+   margin-bottom: 20px;
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 896px) {
+  .card-bg {
+    border: none;
+  }
+}
+
+/*Shrinking for mobile*/
+@media (max-height: 360px) {
+  .card-bg {
+    border: none;
+  }
+}
