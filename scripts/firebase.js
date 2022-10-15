@@ -55,7 +55,7 @@ function UserLogin ( email, password, form )
          // ...
          alert( "Usuario Logeado: " + email );
          form.reset();
-         GlobalFuntions.NavigateTo( "/html/tareas.html" );
+         GlobalFuntions.NavigateTo( "./html/tareas.html" );
       } )
       .catch( ( error ) =>
       {
